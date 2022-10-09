@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'IBM Plex Sans', sans-serif;
+    text-decoration: none;
 }
 :root{
     --cyan: #66E2DC;
@@ -14,9 +15,9 @@
 }
 body{
     background: url(assets/bg-main-mobile.png);
-    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-position: 5% -15%; 
 }
-
 /* globals */
 h1, h2, button{
     font-weight: 700;
@@ -35,8 +36,9 @@ h2{
 header, footer{
     margin: 0 24px;
 }
-
-
+.container, .orange-container, button{
+    border-radius: 12px;
+}
 /* header navigation */
 .nav-bg{
     display: none;
@@ -44,7 +46,6 @@ header, footer{
 nav{
     margin: 40px 0 64px 0;
 }
-
 /* header title */
 h1{
     font-size: 40px;
@@ -53,14 +54,10 @@ h1{
     color: var(--dark-blue);
     margin-bottom: 20px;
 }
-
-
 /* main content */
-
 /* dark-blue container */
 .container{
     margin-top: 166px;
-    border-radius: 12px;
     max-width: 100%;
     height: 420px;
     background-color: var(--dark-blue);
@@ -85,24 +82,200 @@ h1{
     top: 105px;
     transform: translate(-50%, -50%);
 }
-
 /* orange container positioning */
 .orange-container{
-    padding: 48px 37px 0px 37px;
+    padding: 48px 37px;
     position: absolute;
     left: 50%;
     width: 100%;
-    height: 400px;
-    background: #fa7453;
-    border-radius: 12px;
+    height: inherit;
+    background: var(--orange);
     transform: translate(-50%, -5%);
 }
-
-
-
-
-
-
+h2{
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 12px;
+}
+.orange-container p{
+    color: var(--almost-white);
+    margin-bottom: 30px;
+}
+/* price section */
+.price-wrapper span:first-child{
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 52px;
+    color: var(--almost-white);
+    margin-right: 16px;
+}
+.price-wrapper span:nth-child(2){
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+    color: var(--almost-white);
+}
+/* buttons */
+.btn-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.btn-wrapper > .android-btn {
+    margin-top: 16px;
+}
+/* both buttons have same width and height */
+.btn-wrapper button{
+    width: 100%;
+    height: 61px;
+    border: none;
+}
+button img{
+    width: 17.08px;
+}
+.apple-btn{
+    background: var(--dark-blue);
+    color: var(--almost-white);
+    margin-top: 32px;
+}
+.android-btn{
+    background: var(--almost-white);
+    color: var(--dark-blue);
+}
+button img, span{
+    vertical-align: middle;
+}
+/* footer */
 footer{
-    margin-top: 500px;
+    margin-top: 600px;
+}
+footer img{
+    margin-bottom: 32px;
+}
+footer p{
+    margin-bottom: 64px;
+}
+/* social media icons */
+.social-media-icons > a {
+    margin-right: 20px;
+    color: var(--dark-blue);
+}
+.social-media-icons{
+    margin-bottom: 50px;
+}
+/* hovers */
+.social-media-icons a path:hover{
+    fill:var(--orange)
+}
+.apple-btn:hover{
+    background-color: var(--cyan);
+    cursor: pointer;
+}
+.android-btn:hover{
+    background-color: var(--yellow);
+    cursor: pointer;
+}
+/* tablet */
+@media (min-width:768px) {
+    /* background image */
+    body{
+        background: url(assets/bg-main-tablet.png);
+        background-repeat: no-repeat;
+        background-position: 70% -75%;
+    }
+    /* header text styles */
+    h1{
+        font-size: 64px;
+        line-height: 64px;
+        letter-spacing: -0.727273px;
+        width: 70%;
+    }
+    header p{
+        width: 60%;
+    }
+    /* general layout margin */
+    header, main, .orange-container, footer{
+        margin: 0 40px;
+    }
+    /* right background image */
+    .nav-bg{
+        display: block;
+        height: 300px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    /* main content */
+    .orange-container{
+        max-width: 40%;
+        transform: translate(-65%, -65%);
+    }
+    .mobile-img-wrapper img{
+        left: 20%;
+    }
+    .container-bg-pattern{
+        max-width: 50%;
+        left: 30%;
+        transform: translate(-30%);
+    }
+    /* footer */
+    footer{
+        margin-top: 30%;
+    }
+    .footer-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-container p{
+        max-width: 50%;
+    }
+}
+@media (min-width:1440px) {
+    /* background image */
+    body{
+        background: url(assets/bg-main-desktop.png);
+        background-repeat: no-repeat;
+        background-position: 30% 45%
+    }
+    /* general layout margin */
+    header, main, .orange-container, footer{
+        margin: 0 165px;
+    }
+    /* header text styles */
+    h1{
+        font-size: 88px;
+        line-height: 88px;
+        letter-spacing: -1px;
+        width: 70%;
+    }
+    header p{
+        width: 60%;
+    }
+    /* right background image */
+    .nav-bg{
+        display: block;
+        height: 400px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    /* main content */
+    .orange-container{
+        transform: translate(-45%, -65%);
+    }
+    /* footer */
+    footer{
+        margin-top: 20%;
+        display: flex;
+        max-width: 100%;
+        justify-content: space-between;
+    }
+    footer img{
+        margin-bottom: 0;
+        width: 10%;
+        height: 10%;
+        margin-right: 50px;
+    }
+    .footer-container p{
+        max-width: 50%;
+    }
 }
