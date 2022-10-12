@@ -107,7 +107,6 @@ h2{
     font-size: 65px;
     line-height: 52px;
     color: var(--almost-white);
-    margin-right: 16px;
 }
 .price-wrapper span:nth-child(2){
     font-size: 20px;
@@ -146,21 +145,22 @@ button img, span{
 }
 /* footer */
 footer{
-    margin-top: 600px;
+    margin-top: 100vh;
+    display: grid;
+    row-gap: 10%;
 }
-footer img{
-    margin-bottom: 32px;
+.footer-container{
+    display: grid;
+    row-gap: 10%;
 }
-footer p{
-    margin-bottom: 64px;
-}
+
 /* social media icons */
 .social-media-icons > a {
     margin-right: 20px;
     color: var(--dark-blue);
 }
 .social-media-icons{
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 /* hovers */
 .social-media-icons a path:hover{
@@ -219,7 +219,7 @@ footer p{
     }
     /* footer */
     footer{
-        margin-top: 30%;
+        padding-top: 30%;
     }
     .footer-container{
         display: flex;
